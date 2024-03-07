@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.markdown-body {
+  color: #1a202c;
+}
+
+.markdown-body pre {
+  background-color: #f7fafc;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.markdown-body code {
+  background-color: #e2e8f0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  background-color: #e2e8f0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background-color: #3b82f6;
+  text-align: right;
+  padding-right: 10px;
+  color: white;
+  font-weight: bold;
+  transition: width 0.3s ease-in-out;
+}
