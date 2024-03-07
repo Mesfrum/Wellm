@@ -11,6 +11,32 @@ const clearButton = document.getElementById("clear-button");
 const loadingIndicator = document.getElementById("loading");
 const statsLabel = document.getElementById("stats-label");
 
+const body = document.querySelector("body");
+const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+function saveThemePreference(isDarkMode) {
+  localStorage.setItem("darkMode", JSON.stringify(isDarkMode));
+}
+
+function getThemePreference() {
+  const isDarkMode = JSON.parse(localStorage.getItem("darkMode"));
+  return isDarkMode === null ? false : isDarkMode;
+}
+
+function toggleDarkMode() {
+  body.classList.toggle("dark-mode");
+  const dot = document.querySelector(".dot");
+  const isDarkMode = body.classList.contains("dark-mode");
+  if (isDarkMode) {
+    dot.classList.add("translate-x-6", "bg-blue-600");
+  } else {
+    dot.classList.remove("translate-x-6", "bg-blue-600");
+  }
+  saveThemePreference(isDarkMode);
+}
+
+darkModeToggle.addEventListener("change", toggleDarkMode);
+
 function setLoading(isLoading) {
   if (isLoading) {
     loadingIndicator.classList.remove("hidden");
@@ -31,6 +57,13 @@ function setLabel(label, text) {
 
 async function main() {
   const chat = new webllm.ChatModule();
+
+  const isDarkMode = getThemePreference();
+  if (isDarkMode) {
+    body.classList.add("dark-mode");
+    const dot = document.querySelector(".dot");
+    dot.classList.add("translate-x-6", "bg-blue-600");
+  }
 
   chat.setInitProgressCallback((report) => {
     setLabel(promptLabel, report.text);
