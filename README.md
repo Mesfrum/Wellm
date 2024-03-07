@@ -29,7 +29,7 @@ Wellm is a web application built using WebLLM, an open-source project that allow
 
 ## Images
 
-<div style="display: flex; justify-content: space-around;">
+<div style="display: flex; justify-content: space-around; max-width: 50%;">
   <img src="assets/image-2.jpeg" alt="Screenshot 1" style="max-width: 45%;">
   <img src="assets/image-1.jpeg" alt="Screenshot 2" style="max-width: 45%;">
 </div>
