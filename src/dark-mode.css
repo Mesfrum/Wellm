@@ -47,8 +47,14 @@ body.dark-mode .bg-blue-600:hover {
 body.dark-mode .dot {
   background-color: #63b3ed;
   transform: translateX(1.52rem);
+  transition: transform 0.3s ease;
 }
 
 body.dark-mode .block {
   background-color: #2d3748;
+}
+
+/* Add transition property to elements that change colors */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

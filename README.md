@@ -9,6 +9,13 @@ Wellm is a web application built using WebLLM, an open-source project that allow
 - Later reloads will not require any downloading and will work using the in-browser LLM.
 - Quantisized models can offer quicker download times.
 
+---
+**NOTE** 
+
+*Wellm is a research and testing project aimed at pushing the boundaries of WebLLM technology and exploring its capabilities. It is not intended for production use.*
+
+---
+
 ## Features
 
 - **Offline Support**: After the first model download finishes the application can function without an internet connection. (if UI is run locally)
@@ -30,8 +37,8 @@ Wellm is a web application built using WebLLM, an open-source project that allow
 ## Images
 
 <div style="display: flex; justify-content: space-around; max-width: 50%;">
-  <img src="assets/ss-1.jpg" alt="Screenshot 1" style="max-width: 25%;">
-  <img src="assets/ss-2.jpg" alt="Screenshot 2" style="max-width: 25%;">
+  <img src="assets/ss-1.jpg" alt="Screenshot 1" style="max-width: 15%;">
+  <img src="assets/ss-2.jpg" alt="Screenshot 2" style="max-width: 15%;">
 </div>
 
 ## Installation
